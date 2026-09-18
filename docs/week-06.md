@@ -17,7 +17,3 @@
 - Make the CAD models and 3D print them.
 
 
-## Links
-
-- Code:
-- Photos / CAD:
