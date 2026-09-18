@@ -29,7 +29,4 @@
 
 - Start building out the parametric CAD models of the baffle. (Though looking at the calendar, Onam is coming up, so the schedule might shift)
 
-## Links
 
-- Code:
-- Photos / CAD:
