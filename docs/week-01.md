@@ -20,7 +20,3 @@
 
 - Do a trade study on different deployment mechanisms to figure out how this thing will actually open up
 
-## Links
-
-- Code:
-- Photos / CAD:
