@@ -23,7 +23,4 @@
 
 - Full system integration. I need to physically mount the servos into the base plate, attach the arms to the top plate, and get the code to successfully lift the actual printed baffle.
 
-## Links
 
-- Code:
-- Photos / CAD:
