@@ -25,22 +25,19 @@ This repository contains the complete documentation, CAD files, and control soft
 
 ## Electronics & Wiring
 To prevent torque spikes from browning out or damaging the Raspberry Pi, the servos must be powered by a completely isolated 6V power supply (the 4x AA pack) with a shared common ground.
-Component,Wire / Pin,Connection Destination
-Raspberry Pi 5,Pin 32 (GPIO 12 / PWM0),Splices to the Signal (Yellow/Orange) wires on both MG90s servos.
-Raspberry Pi 5,Pin 39 (Ground),Connects to the Negative (Black) wire of the battery pack.
-6V Battery Pack,Positive (Red),Splices to the VCC (Red) wires on both servos.
-6V Battery Pack,Negative (Black),Connects to Pi Pin 39 and Ground (Brown/Black) on both servos.
-Pi Cam 3,MIPI Ribbon Cable,Connects directly to the RPi 5 camera port.
 
+## Software Setup
+The control software utilizes the Raspberry Pi's hardware PWM blocks to ensure jitter-free servo motion.
+Step 1: Enable Hardware PWM
+Open your /boot/firmware/config.txt and append the following line to enable the 2-channel PWM overlay:   
+`dtoverlay=pwm-2chan,pin=12,func=4,pin2=13,func2=4`
+Reboot the Raspberry Pi after saving.
 
+Step 2: Install Dependencies
+Install the required Python packages for the web dashboard and camera stream:
 First-time setup:
 
-1. Push once and let the Action finish. It creates a `gh-pages` branch.
-2. Settings → Pages → Source: **Deploy from a branch** → `gh-pages` / `root`.
-
-Your site will be live at `https://<org-or-user>.github.io/<repo>/`.
+`sudo apt update
+sudo apt install python3-flask python3-opencv python3-picamera2`
 
 
-## Weekly logs
-
-Fill in `docs/week-01.md` through `docs/week-09.md` as you go. Keep them short: what you did, what's blocking you, what's next.
