@@ -12,6 +12,8 @@
   1. Control Tab: Simple buttons to Deploy and Stow, alongside a live system log.
   2. Live Feed Tab: Streams real-time MJPEG video from the Pi Cam 3, complete with a button to download the last 15 seconds of footage.
   3. Analysis Tab: Automatically captures a frame when the baffle is stowed and another when deployed. It calculates the mean brightness in a predefined "glare" region, outputs a plain-English verdict on whether stray light increased or dropped, and generates a visual heatmap showing exactly where the light differences occurred.
+<img width="1910" height="871" alt="image" src="https://github.com/user-attachments/assets/4b18fa8a-343e-48d6-8873-a45908c6aafd" />
+
 - Rewrote the servo driving logic to use a "smoothstep" mathematical S-curve. Instead of snapping violently from one position to the next, the servos now gently accelerate, cruise, and smoothly decelerate over a 2.5-second window.
 - **Final Assembly:** I placed the entire functioning stack the Raspberry Pi 5, the Pi Cam (mounted underneath looking up through the baffle), the servos, and the 3D-printed baffle inside the clear laser-cut 1U acrylic chassis. Only the 6V AA battery pack and the Pi's power brick sit outside the box.
 
